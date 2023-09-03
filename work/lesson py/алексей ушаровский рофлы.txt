@@ -1,0 +1,9 @@
+для умных           для тупых
+                       
+мапу                map         
+рутурн              return	
+добл                double
+флоут               float
+прайвот             private
+протектет           protectet
+	

@@ -1,0 +1,30 @@
+adduser
+
+touch  file1
+touch  file2 // создали два произвольных файла
+
+sudo chmod u=rwx,g=rw,o=r file1 //присвоили права в символьном виде
+sudo chmod u=rwx,g=,o= file2
+
+
+sudo 664 file1 // присовили права в численном виде
+sudo 600 file2
+
+sudo adduser hwuser(создаем новго юзера и заполняем)
+sudo useradd -s /bin/bash -m -d /home/oleg oleg (создаем еще одного)
+
+sudo userdel hwuser(удаляем)
+sudo groupadd hwg(создаем группу)
+sudo addgroup oleg hwg(добавляем юзера в группу) 
+
+
+sudo chown -R oleg:hwuser /home/db/      
+
+sudo visudo
+db ALL=(ALL) NOPASSWD: ALL (sudo без пароля)
+usermod -aG sudo oleg (пользователь sudo)
+sudo ls -la /root (проверка)
+
+
+
+
